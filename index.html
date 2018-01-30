@@ -46,14 +46,18 @@
     <script>
     
         var holes = document.querySelectorAll('.hole');
-        var firstHole = holes[0];
-        var secondHole = holes[1];
 
         function moleClicked() {
-            console.log('mole clicked');
+            if (this.innerHTML === "") {
+                console.log('Mole is not here');
+            } else {
+                console.log('Mole IS here!');
+            }
         }
-        firstHole.addEventListener('click', moleClicked);
-        secondHole.addEventListener('click', moleClicked);
+       
+       for (var i = 0; i < holes.length; i++) {
+           holes[i].addEventListener('click', moleClicked);
+       }
         
         
     
