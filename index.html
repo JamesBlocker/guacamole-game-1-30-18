@@ -24,7 +24,7 @@
     <h1>Guacamole</h1>
     <div id="score-board">
         <span id="score-label">Score:</span>
-        <span id="score-count">0</span>
+        <span id="score-count"></span>
     </div>
     <div id="time-board">
         <span id="time-label">Time remaining:</span>
@@ -43,31 +43,6 @@
         <div class="hole"></div>
     </div>
 
-    <script>
-    
-        var holes = document.querySelectorAll('.hole');
-
-        function randomInt(n) {
-            return Math.floor(Math.random() * n);
-        } 
-
-        function moleClicked() {
-            if (this.innerHTML === "") {
-                console.log('Mole is not here');
-            } else {
-                console.log('Mole IS here!');
-                this.innerHTML = "";
-                var nextHole = holes[randomInt(9)];
-                nextHole.innerHTML = "M";
-            }
-        }
-       
-       for (var i = 0; i < holes.length; i++) {
-           holes[i].addEventListener('click', moleClicked);
-       }
-        
-        
-    
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
